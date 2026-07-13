@@ -177,7 +177,7 @@
 #define PWMCLK_CNTL        40
 #define PWMCLK_DIV        41
 
-#define CM_GP0DIV (0x7e101074)
+#define CM_GP0DIV (0x7e10107c)
 
 #define GPCLK_CNTL        (0x78/4)
 #define GPCLK_DIV        (0x7c/4)
