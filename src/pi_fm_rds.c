@@ -179,8 +179,8 @@
 
 #define CM_GP0DIV (0x7e101074)
 
-#define GPCLK_CNTL        (0x70/4)
-#define GPCLK_DIV        (0x74/4)
+#define GPCLK_CNTL        (0x78/4)
+#define GPCLK_DIV        (0x7c/4)
 
 #define PWMCTL_MODE1        (1<<1)
 #define PWMCTL_PWEN1        (1<<0)
@@ -246,7 +246,7 @@ terminate(int num)
     // Stop outputting and generating the clock.
     if (clk_reg && gpio_reg && mbox.virt_addr) {
         // Set GPIO4 to be an output (instead of ALT FUNC 0, which is the clock).
-        gpio_reg[GPFSEL0] = (gpio_reg[GPFSEL0] & ~(7 << 12)) | (1 << 12);
+        gpio_reg[GPFSEL0] = (gpio_reg[GPFSEL0] & ~(7 << 15)) | (1 << 15);
 
         // Disable the clock generator.
         clk_reg[GPCLK_CNTL] = 0x5A;
