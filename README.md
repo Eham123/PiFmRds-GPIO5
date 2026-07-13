@@ -5,6 +5,8 @@ Pi-FM-RDS
 
 This version of PiFmRds uses GPIO5 instead of GPIO4 so those using displays that use lots of GPIO pins can use PiFmRds.
 
+If the transmission signal is super weak, try adding the line force_turbo=1 to the file /boot/firmware/config.txt, then PiFmRds will be able to transmit at full power.
+
 ## FM-RDS transmitter using the Raspberry Pi
 
 This program generates an FM modulation, with RDS (Radio Data System) data generated in real time. It can include monophonic or stereophonic audio.
