@@ -1,6 +1,9 @@
 Pi-FM-RDS
 =========
 
+## PiFmRds GPIO5 Support
+
+This version of PiFmRds uses GPIO5 instead of GPIO4 so those using displays that use lots of GPIO pins can use PiFmRds.
 
 ## FM-RDS transmitter using the Raspberry Pi
 
